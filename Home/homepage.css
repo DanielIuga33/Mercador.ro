@@ -1,0 +1,28 @@
+h1 {
+    color:coral;
+    font-size: 50px;
+    font-family:cursive;
+    text-align: center;
+    line-height: 300px;
+}
+a {
+    font-family: Arial, sans-serif; /* Specify the desired font family */
+    font-size: 30px; /* Specify the desired font size */
+    font-weight: bold; /* Specify the desired font weight (e.g., bold) */
+    color:black; /* Specify the desired font color */
+}
+button{
+    background-color: transparent;
+}
+body {
+    background-image:  url('homepage.jpg');
+    background-size: cover; /* Optional: Scale the background image to cover the entire background */
+    background-position: center; /* Optional: Position the background image at the center */
+    background-repeat: no-repeat; /* Optional: Prevent the background image from repeating */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    margin: 0;
+    margin-left: -50px;
+}
+.container{
+    text-align: center;
+}

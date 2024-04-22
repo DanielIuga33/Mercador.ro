@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="anunt.css">
+</head>
+<body>
+    <button id="homeButton"> Home </button>
+    <form id="myForm" action="dbinsert.php" method="post" enctype="multipart/form-data">
+        <div id="Title"><strong><hr>Post your car </strong></div>
+        <h1 id ="title1"> Add a title:</h1>
+        <div class="titlu"><input type="text" id="cartitle" name="title" style="width: 190px; height: 24px;"></div>
+        <div id="brand1" class="row">Brand*</div> 
+        <p><input type="text" name="brand" id="brand"></p>
+        <div id="model1" class="row">Model*</div> 
+        <p><input type="text" id="model" name="model"></p>
+
+        <div class="row">Chassis series[VIN]</div> 
+        <p><input type="text" id="vin" name="vin"></p>
+
+        <div id="price1" class="row">Price*</div><br>
+        <div class="row"><input type="radio" name="curr" id="euro"> Euro <input type="radio" name="curr" id="ron"> Ron</div>
+        <p><input type="text" id="price" name="price"></p></div>
+
+
+        <div id="phone1" class="row">Phone number*</div>
+        <p><input type="text" id="phone" name="phone"></p></div>
+
+        
+        <div class="row">Engine capacity*</div> 
+        <p><input type="text" id="cm3" name="cm3" placeholder="cm³"></p>
+
+        <div class="row">Engine Power</div> 
+        <p><input type="text" id="power" name="hp" placeholder="CP"></p>
+
+        <div id="fuel1" class="row">Fuel Type*</div> 
+        <p><select id="fuel" name="fuel" style="width: 180px; height: 21px;">
+            <option value="" selected>choose</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Electric">Electric</option>
+            <option value="Hybrid">Hybrid</option>
+        </select></p>
+        </div>
+
+        <div id="body1" class="row">Car Body*</div> 
+        <p><select id="body" name="body" style="width: 180px; height: 21px;">
+            <option value="" selected>choose</option>
+            <option value="Cabrio">Cabrio</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Coupe">Coupe</option>
+            <option value="Pickup">Pickup</option>
+            <option value="HatchBack">HatchBack</option>
+            <option value="Break">Break</option>
+            <option value="Off-road">Off-road</option>
+            <option value="Minibus">Minibus</option>
+            <option value="Monovolum">Monovolum</option>
+            <option value="SUV">SUV</option>
+        </select></p>
+        </div>
+
+        <div class="row">Milleage</div> 
+        <p><input type="text" id="km" name="km" placeholder="km"></p>
+
+        <div class="row">Color</div> 
+        <p><input type="text" id="color" name="color"></p>
+
+        <div id="year1" class="row">Year of fabrication*</div> 
+        <p><input type="number" id="year" name="year"></p>
+
+        <div class="row">Number of doors</div> 
+        <p><input type="number" id="doorsNr" name="doors"></p>
+        <hr>
+        <!-- Choices -->
+        <span style="font-size: 17px;">
+            <div class="row"><u>State</u></div> 
+            <p><input type="radio" name="new/used" value="New" id="new"><i> New <input type="radio" name="new/used" value="Used" id="used"> Used</i></p>
+
+            <div class="row"><u>Gearbox type</u></div> 
+            <p><input type="radio" name="man/aut" value="Automatic" id="automatic"><i> Automatic <input type="radio" name="man/aut" value="Manual" id="manual"> Manual</i></p>
+
+            <div class="row"><u>Steering Wheel</u></div> 
+            <p><input type="radio" name="lf/rg" value="Left" id="leftSide"> Left Side <input type="radio" name="lf/rg" value="Right" id="rightSide"><i> Right Side</i></p>
+        </span>
+
+        <!-- Description -->
+        <div id="desc" class="row">Description*</div><br>
+        <textarea name="description" id="description" cols="50" rows="10"></textarea>
+        <p id="desc">Write at least 40 words.</p>
+        <!-- Image -->
+        <div class="image">
+            <div class="image-upload-box">
+                <label for="imageUpload">
+                    <div>Select images to upload</div>
+                </label>
+            <div class="image-upload-box">
+                <input type="file" id="imageUpload" name="image" accept="image/*">
+            </div>
+                
+            </div>
+            <button class="button" id="submit">Submit</button>
+        </div>
+    </form>
+    <hr>
+        <script src="anunt.js"></script>
+</body>
+</html>

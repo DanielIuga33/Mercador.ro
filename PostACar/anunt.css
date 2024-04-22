@@ -1,0 +1,92 @@
+#homeButton{
+    background-color: gray;
+    color: white;
+    font-size: 12px;
+    width: 50px;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+#Title{
+    text-align: center;
+    font-size: 40px;
+}
+.titlu{
+    position: absolute; /* Position the container absolutely */
+    top: 150px; /* Align to the top of the container */
+    left: 800px;
+}
+p {
+    margin-left: 600px;
+}
+h1 {
+    margin-left: 630px;
+}
+.row{
+    margin-bottom: -15px;
+    margin-left: 600px;
+}
+.rightText{
+    position: absolute; /* Position the container absolutely */
+    top: 167px; /* Align to the top of the container */
+    left: 900px; /* Align to the right side of the container */ 
+}
+.radio{
+    position: absolute; /* Position the container absolutely */
+    top: 165px; /* Align to the top of the container */
+    left: 960px; /* Align to the right side of the container */ 
+}
+.rightInput{
+    position: absolute; /* Position the container absolutely */
+    top: 168px; /* Align to the top of the container */
+    left: 300px; /* Align to the right side of the container */ 
+}
+.rightText2{
+    position: absolute; /* Position the container absolutely */
+    top: 225px; /* Align to the top of the container */
+    left: 900px; /* Align to the right side of the container */ 
+}
+.rightInput2{
+    position: absolute; /* Position the container absolutely */
+    top: 226px; /* Align to the top of the container */
+    left: 300px; /* Align to the right side of the container */ 
+}
+.image{
+    position: absolute;
+    top: 320px; /* Align to the top of the container */
+    left: 900px; /* Align to the right side of the container */ 
+}
+#desc{
+   margin-top:-4px; 
+   margin-left: 610px;
+}
+textarea{
+    margin-left: 600px;
+    background-color: rgb(231, 231, 231);
+    resize: none;
+}
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: gainsboro;
+}
+
+.image-upload-box {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    border: 2px solid black; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Positioning context for absolute positioning */
+}
+/* Style for the file input field */
+
+.button{
+    position: absolute;
+    top: 270px;
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: gray; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}

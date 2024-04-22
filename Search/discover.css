@@ -1,0 +1,41 @@
+#home {
+    background-color: gray;
+    color: white;
+    font-size: 12px;
+    width: 50px;
+    /* Add more styles as needed */
+}
+.container {
+    display: flex; /* Creează un layout de tip coloană */
+}
+
+.sidebar {
+    width: 250px; /* Setează lățimea barei laterale */
+    padding: 20px; /* Adaugă spațiu pentru elementele din bara laterală */
+    background-color: #f0f0f0; /* Culorează bara laterală */
+}
+.divider {
+    width: 2px; /* Lățimea barei */
+    display: flex;
+    background-color: #ccc; /* Culorează bara */
+}
+
+.main-content {
+    flex-grow: 1; /* Asigură ca conținutul principal să ocupe spațiul rămas */
+    padding: 20px; /* Adaugă spațiu pentru elementele din conținutul principal */
+}
+
+/* Stilizare pentru elementele de căutare */
+input[type="text"],
+button {
+    width: 100%; /* Asigură ca elementele de căutare să se extindă pe întreaga lățime a barei laterale */
+    margin-bottom: 10px; /* Adaugă spațiu între elementele de căutare */
+}
+/* Stilurile pentru titlul filtrului principal */
+.filter-title {
+    margin-top: 0;
+    cursor: pointer; /* Transformă cursorul în pointer la trecerea peste titlu */
+}
+body{
+    background-color: #ccc;
+}
