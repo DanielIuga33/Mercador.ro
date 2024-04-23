@@ -1,3 +1,3 @@
 document.getElementById("home").onclick = function(){
-    window.location.href = "../Home/homepage.html";
+    window.location.href = "../Home/index.html";
 };

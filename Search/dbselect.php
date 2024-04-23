@@ -30,15 +30,11 @@
                     include "../database.php";
         
                     $sql = "SELECT * FROM Car";
-                    $result = mysqli_query($conn, $sql);
-                
-                    if (mysqli_num_rows($result) > 0){
-                        $row = mysqli_fetch_all($result);
-                        foreach($row as $elem){
-                            echo $elem[1] . "<br>";
-                        }
-                    }
+                    $rows = mysqli_query($conn, $sql);
                 ?>
+                <?php foreach($rows as $row) : ?>
+                <img src="img/<?php echo $row['model']; ?>" width="200" alt="">;
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
