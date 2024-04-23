@@ -25,7 +25,7 @@
     $color = $_POST["color"];
 
     $year = $_POST["year"];
-    
+    $city = $_POST["city"];
     $doors = $_POST["doors"];
     $state = $_POST["new/used"];
     $gearbox = $_POST["man/aut"];
@@ -51,7 +51,7 @@
             "<script> alert('Invalid Image Extension');</script>"
             ;
         }
-        else if($fileSize > 1000000){
+        else if($fileSize > 10000000){
             echo
             "<script> alert('Image Size Is Too Large');</script>"
             ;
@@ -60,17 +60,18 @@
             $newImageName = uniqid();
             $newImageName .= '.' . $imageExtension;
 
-            move_uploaded_file($tmp_name, 'img/' . $newImageName);
+            move_uploaded_file($tmpName, '../img/' . $newImageName);
         }
     }
 
 
     $sql = "INSERT INTO Car (title, brand, model, vin, price, phone, cm3, hp, fuel, body,
                             km, color, year, doors, state, gearbox, steeringwheel, img, 
-                            description)
+                            description, city)
             VALUES ('{$title}','{$brand}', '{$model}', '{$vin}', '{$price}', '{$phone}', 
                     '{$cm3}', '{$hp}', '{$fuel}', '{$body}', '{$km}', '{$color}',
-                    '{$year}', '{$doors}', '{$state}', '{$gearbox}', '{$steeringwheel}', '{$newImageName}', '{$desc}')";
+                    '{$year}', '{$doors}', '{$state}', '{$gearbox}', '{$steeringwheel}',
+                     '{$newImageName}', '{$desc}', '{$city}')";
     try{
         mysqli_query($conn, $sql);
         mysqli_close($conn);

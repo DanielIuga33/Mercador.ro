@@ -1,0 +1,91 @@
+#home {
+    background-color: gray;
+    color: white;
+    font-size: 12px;
+    width: 50px;
+    /* Add more styles as needed */
+}
+.container {
+    display: flex; /* Creează un layout de tip coloană */
+}
+
+.container h2{
+    color: #ccc;
+}
+
+.sidebar {
+    width: 250px; /* Setează lățimea barei laterale */
+    padding: 20px; /* Adaugă spațiu pentru elementele din bara laterală */
+    background-color:#0b0b0e /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
+}
+.divider {
+    width: 2px; /* Lățimea barei */
+    display: flex;
+    background-color: #ccc; /* Culorează bara */
+}
+
+.main-content {
+    flex-grow: 1; /* Asigură ca conținutul principal să ocupe spațiul rămas */
+    padding: 20px; /* Adaugă spațiu pentru elementele din conținutul principal */
+}
+
+/* Stilizare pentru elementele de căutare */
+input[type="text"],
+button {
+    width: 100%; /* Asigură ca elementele de căutare să se extindă pe întreaga lățime a barei laterale */
+    margin-bottom: 10px; /* Adaugă spațiu între elementele de căutare */
+}
+/* Stilurile pentru titlul filtrului principal */
+.filter-title {
+    margin-top: 0;
+    cursor: pointer; /* Transformă cursorul în pointer la trecerea peste titlu */
+}
+body{
+    background-color:#0d0d11;/*#6d2525*/
+}
+
+.car {
+    display: flex;
+    align-items: center; /* Alinează imaginea și detaliile pe axa verticală */
+    margin-bottom: 20px; /* Spațiu între fiecare mașină */
+
+    width: 800px; /* Lățimea containerului */
+    height: 200px; /* Înălțimea containerului */
+    background-color:#0b0b0e; /*#adadad *//* Culoarea de fundal */
+    border: 2px transparent #707070; /* Border-ul containerului */
+    padding: 20px; /* Spațiul interior între conținut și marginile containerului */
+    margin: 3px; /* Centrarea containerului pe pagină */
+}
+
+.car img {
+    width: 350px; /* Ajustați dimensiunile imaginii după preferință */
+    margin-right: 20px; /* Spațiu între imagine și detalii */
+}
+
+.car-details {
+    flex: 1; /* Permite detaliilor să ocupe tot spațiul disponibil în containerul flexibil */
+}
+
+.car-details h2 {
+    margin-top: 0; /* Eliminați marginile de sus pentru titlu */
+    color: #edeaeadc;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 525;
+}
+
+.car-details p {
+    font-family: Arial;
+    color: #edeaeadc;
+    font-size: 14px;
+    font-weight: 700;
+}
+#state{
+    font-family: Arial;
+    color: #edeaeadc;
+    font-size: 14px;
+    font-weight: 700;
+    border: 5px solid #141415;
+    background-color: #141415;
+}
+
+

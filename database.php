@@ -13,9 +13,6 @@
     } 
     catch(mysqli_sql_exception){
         echo "Could not connect <br>";
+        header("Location: ../Home/homepage.html");
     }
-    if ($conn){
-        echo "You are connected ! <br>";
-    }
-
 ?>
