@@ -6,22 +6,36 @@
     /* Add more styles as needed */
 }
 .container {
-    display: flex; /* Creează un layout de tip coloană */
+    display:flex; /* Creează un layout de tip coloană */
 }
 
 .container h2{
     color: #ccc;
+    display: flex;
+}
+.container select{
+    color: rgb(0, 0, 0);
+    display: flex;
 }
 
 .sidebar {
     width: 250px; /* Setează lățimea barei laterale */
     padding: 20px; /* Adaugă spațiu pentru elementele din bara laterală */
-    background-color:#0b0b0e; /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
+    background-color:#2a2a2e; /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
 }
 .divider {
     width: 2px; /* Lățimea barei */
-    display: flex;
+    display: block;
     background-color: #ccc; /* Culorează bara */
+}
+.row{
+    color: #ccc;
+}
+
+.input{
+    display: inline-block; /* sau inline */
+    width: auto;
+    margin-right: 10px;
 }
 
 .main-content {
@@ -49,16 +63,17 @@ body{
     align-items: center; /* Alinează imaginea și detaliile pe axa verticală */
     margin-bottom: 20px; /* Spațiu între fiecare mașină */
 
-    width: 800px; /* Lățimea containerului */
-    height: 200px; /* Înălțimea containerului */
-    background-color:#0b0b0e; /*#adadad *//* Culoarea de fundal */
+    width: 600px; /* Lățimea containerului */
+    height: auto; /* Înălțimea containerului */
+    background-color:#292935; /*#adadad *//* Culoarea de fundal */
     border: 2px transparent #707070; /* Border-ul containerului */
     padding: 20px; /* Spațiul interior între conținut și marginile containerului */
     margin: 3px; /* Centrarea containerului pe pagină */
 }
 
 .car img {
-    width: 350px; /* Ajustați dimensiunile imaginii după preferință */
+    width: 200px; /* Ajustați dimensiunile imaginii după preferință */
+    height: auto;
     margin-right: 20px; /* Spațiu între imagine și detalii */
 }
 
@@ -87,5 +102,6 @@ body{
     border: 5px solid #141415;
     background-color: #141415;
 }
+
 
 

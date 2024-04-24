@@ -19,8 +19,102 @@
             <input type="text" style="background-color: #ccc;" placeholder="Căutare...">
             <button style="background-color: #1d1d23dc">Caută</button>
             <!-- Alte elemente de filtrare -->
-            
-            <div id="body1" class="row">Car Body*</div> 
+            <div id="brand1" class="row">Brand</div>
+            <select id="brand" name="brand" style="width: 180px; height: 21px;">
+                <option value="" selected>see all</option>
+                <option value="Abart">Abart</option>
+                <option value="Acura">Acura</option>
+                <option value="Aixam">Aixam</option>
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="Aro">Aro</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Audi">Audi</option>
+                <option value="Austin">Austin</option>
+                <option value="Baic">Baic</option>
+                <option value="Bentley">Bentley</option>
+                <option value="BMW">BMW</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Buick">Buick</option>
+                <option value="Cadillac">Cadillac</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Comarth">Comarth</option>
+                <option value="Dacia">Dacia</option>
+                <option value="Daewoo">Daewoo</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="DFSK">DFSK</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Fisker">Fisker</option>
+                <option value="Ford">Ford</option>
+                <option value="Minibus">Minibus</option>
+                <option value="Honda">Honda</option>
+                <option value="Hummer">Hummer</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Ineos">Ineos</option>
+                <option value="Infiniti">Infiniti</option>
+                <option value="Isuzu">Isuzu</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Jeep">Jeep</option>
+                <option value="KG Mobility">KG Mobility</option>
+                <option value="Kia">Kia</option>
+                <option value="Lada">Lada</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Lancia">Lancia</option>
+                <option value="Land Rover">Land Rover</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Ligier">Ligier</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Lotus">Lotus</option>
+                <option value="Lucid">Lucid</option>
+                <option value="Lynk&Co">Lynk&Co</option>
+                <option value="Maserati">Maserati</option>
+                <option value="Mazda">Mazda</option>
+                <option value="McLaren">McLaren</option>
+                <option value="Maybach">Maybach</option>
+                <option value="Merceds-Benz">Merceds-Benz</option>
+                <option value="MG">MG</option>
+                <option value="Microlinio">Microlinio</option>
+                <option value="Mini">Mini</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Microcar">Microcar</option>
+                <option value="Morgan">Morgan</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Opel">Opel</option>
+                <option value="Peugeot">Peugeot</option>
+                <option value="Plymouth">Plymouth</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Renault">Renault</option>
+                <option value="Rolls-Royce">Rolls-Royce</option>
+                <option value="Rover">Rover</option>
+                <option value="Saab">Saab</option>
+                <option value="Seat">Seat</option>
+                <option value="Skoda">Skoda</option>
+                <option value="Smart">Smart</option>
+                <option value="SsangYong">SsangYong</option>
+                <option value="Skywell">Skywell</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Suzuki">Suzuki</option>
+                <option value="Tesla">Tesla</option>
+                <option value="Tata">Tata</option>
+                <option value="Tazzari">Tazzari</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Trabant">Trabant</option>
+                <option value="Triumph">Triumph</option>
+                <option value="Vauxhall">Vauxhall</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Weismann">Weismann</option>
+                <option value="Alte marci">Alte marci</option>
+                <option value="JAC">JAC</option>
+                <option value="SWM">SWM</option>
+                <option value="Forthing">Forthing</option>
+                <option value="XEV">XEV</option>
+            </select><br>
+            <div id="body1" class="row">Car Body</div>
             <select id="body" name="body" style="width: 180px; height: 21px;">
                 <option value="" selected>choose</option>
                 <option value="Cabrio">Cabrio</option>
@@ -33,9 +127,35 @@
                 <option value="Minibus">Minibus</option>
                 <option value="Monovolum">Monovolum</option>
                 <option value="SUV">SUV</option>
+            </select><br>
+            <div id="years" class="row">Year of fabricatiom</div>
+            <input type="number" class="input" placeholder="From" style="width: 75px">
+            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <br><br>
+            <div id="prices" class="row">Price</div>
+            <input type="number" class="input" placeholder="From" style="width: 75px">
+            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <br><br>
+            <div id="prices" class="row">Km</div>
+            <input type="number" class="input" placeholder="From" style="width: 75px">
+            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <br><br>
+            <div id="fuel1" class="row">Fuel</div>
+            <select id="fuel" name="fuel" style="width: 180px; height: 21px;">
+                <option value="" selected>see all</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="GPL">GPL</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Electric">Electric</option>
             </select>
-            </div>
-
+            <br>
+            <div id="gearBox1" class="row">Gearbox</div>
+            <select id="gearBox" name="gearBox" style="width: 180px; height: 21px;">
+                <option value="" selected>see all</option>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
         </div>
         <div class="divider"></div> <!-- Bară separată -->
         <div class="main-content">
