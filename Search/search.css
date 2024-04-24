@@ -16,7 +16,7 @@
 .sidebar {
     width: 250px; /* Setează lățimea barei laterale */
     padding: 20px; /* Adaugă spațiu pentru elementele din bara laterală */
-    background-color:#0b0b0e /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
+    background-color:#0b0b0e; /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
 }
 .divider {
     width: 2px; /* Lățimea barei */

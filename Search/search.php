@@ -19,6 +19,23 @@
             <input type="text" style="background-color: #ccc;" placeholder="Căutare...">
             <button style="background-color: #1d1d23dc">Caută</button>
             <!-- Alte elemente de filtrare -->
+            
+            <div id="body1" class="row">Car Body*</div> 
+            <select id="body" name="body" style="width: 180px; height: 21px;">
+                <option value="" selected>choose</option>
+                <option value="Cabrio">Cabrio</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Coupe">Coupe</option>
+                <option value="Pickup">Pickup</option>
+                <option value="HatchBack">HatchBack</option>
+                <option value="Break">Break</option>
+                <option value="Off-road">Off-road</option>
+                <option value="Minibus">Minibus</option>
+                <option value="Monovolum">Monovolum</option>
+                <option value="SUV">SUV</option>
+            </select>
+            </div>
+
         </div>
         <div class="divider"></div> <!-- Bară separată -->
         <div class="main-content">
