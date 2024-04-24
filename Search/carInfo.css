@@ -1,0 +1,14 @@
+.container{
+    border: 2px solid;
+    width: 900px;
+    justify-content: center; /* Aliniere pe orizontală */
+    height: 100vh;
+}
+.container h1{
+    text-align: center;
+}
+.container img{
+    border: 2px solid grey;
+    width: 300px;
+    height: 150px;
+}
