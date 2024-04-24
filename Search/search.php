@@ -32,7 +32,7 @@
                 <form action="carInfo.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
                     <div class="car" onclick="this.parentNode.submit()">
-                        <img src="../img/<?php echo $row['img']; ?>" alt="Imagine mașină">
+                        <img src="../img/<?php $arr = explode(',', $row['img']); echo $arr[0]; ?>" alt="Imagine mașină">
                         <div class="car-details">
                             <h2><?php echo $row['brand'] . ' ' . $row['model']; ?></h2>
                             <label id="state"><?php echo $row['state']; ?></label>

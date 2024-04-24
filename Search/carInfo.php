@@ -18,10 +18,13 @@
     $elem = mysqli_fetch_array($elems);
     ?>
     <div class="container">
-        <div class="title">
-            <h1><?php echo $elem['title'];?></h1>
+        <h1><?php echo $elem['title'];?></h1>
+        <?php $arr = explode(',', $elem['img']);?> 
+        <?php foreach ($arr as $e) : ?>
+        <div class="car">
+        <img src="../img/<?php echo $e ?>" alt="Imagine Masina"><br> 
         </div>
-        <img src="../img/<?php echo $elem['img']?>" alt="Imagine Masina"> 
+        <?php endforeach; ?> 
     </div>
 </body>
 </html>

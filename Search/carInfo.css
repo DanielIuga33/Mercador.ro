@@ -9,6 +9,13 @@
 }
 .container img{
     border: 2px solid grey;
+    display: flex;
     width: 300px;
     height: 150px;
+}
+.car{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 200px pentru o coloană, auto-fit pentru a se încadra în container, minmax pentru dimensiunile minime și maxime */
+    grid-gap: 20px;
+     */
 }

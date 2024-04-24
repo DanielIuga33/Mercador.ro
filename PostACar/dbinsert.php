@@ -39,29 +39,35 @@
         ;
     }
     else{
-        $fileName = $_FILES["image"]["name"];
-        $fileSize = $_FILES["image"]["size"];
-        $tmpName = $_FILES["image"]["tmp_name"];
+        $finalImage = "";
+        print_r($_FILES);
+        for($i = 0; $i < count($_FILES["image"]["name"]); $i++){
+            $fileName = $_FILES["image"]["name"][$i];
+            $fileSize = $_FILES["image"]["size"][$i];
+            $tmpName = $_FILES["image"]["tmp_name"][$i];
 
-        $validImageExtension = ['jpg', 'jpeg', 'png'];
-        $imageExtension = explode('.', $fileName);
-        $imageExtension = strtolower(end($imageExtension));
-        if (!in_array($imageExtension, $validImageExtension)){
-            echo
-            "<script> alert('Invalid Image Extension');</script>"
-            ;
-        }
-        else if($fileSize > 10000000){
-            echo
-            "<script> alert('Image Size Is Too Large');</script>"
-            ;
-        }
-        else{
-            $newImageName = uniqid();
-            $newImageName .= '.' . $imageExtension;
+            $validImageExtension = ['jpg', 'jpeg', 'png'];
+            $imageExtension = explode('.', $fileName);
+            $imageExtension = strtolower(end($imageExtension));
+            if (!in_array($imageExtension, $validImageExtension)){
+                echo
+                "<script> alert('Invalid Image Extension');</script>"
+                ;
+            }
+            else if($fileSize > 10000000){
+                echo
+                "<script> alert('Image Size Is Too Large');</script>"
+                ;
+            }
+            else{
+                $newImageName = uniqid();
+                $newImageName .= '.' . $imageExtension;
 
-            move_uploaded_file($tmpName, '../img/' . $newImageName);
+                move_uploaded_file($tmpName, '../img/' . $newImageName);
+                $finalImage .= $newImageName . ',';
+            }
         }
+        $finalImage = rtrim($finalImage, ',');
     }
 
 
@@ -71,7 +77,7 @@
             VALUES ('{$title}','{$brand}', '{$model}', '{$vin}', '{$price}', '{$phone}', 
                     '{$cm3}', '{$hp}', '{$fuel}', '{$body}', '{$km}', '{$color}',
                     '{$year}', '{$doors}', '{$state}', '{$gearbox}', '{$steeringwheel}',
-                     '{$newImageName}', '{$desc}', '{$city}')";
+                     '{$finalImage}', '{$desc}', '{$city}')";
     try{
         mysqli_query($conn, $sql);
         mysqli_close($conn);
