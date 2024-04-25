@@ -16,8 +16,9 @@
             <button id="home">Home</button>
             <!-- Filtre de căutare -->
             <h2>Filtre de Căutare</h2>
-            <input type="text" style="background-color: #ccc;" placeholder="Căutare...">
-            <button style="background-color: #1d1d23dc">Caută</button>
+            <form action="search.php" method="post" enctype="multipart/form-data">
+            <input type="text" style="background-color: #ccc; width: 242px" placeholder="Search...">
+            <button name="submit "style="background-color: gray">Caută</button>
             <!-- Alte elemente de filtrare -->
             <div id="brand1" class="row">Brand</div>
             <select id="brand" name="brand" style="width: 180px; height: 21px;">
@@ -129,16 +130,16 @@
                 <option value="SUV">SUV</option>
             </select><br>
             <div id="years" class="row">Year of fabricatiom</div>
-            <input type="number" class="input" placeholder="From" style="width: 75px">
-            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <input type="number" name="yearStart" class="input" placeholder="From" style="width: 75px">
+            <input type="number" name="yearEnd" class ="input" placeholder="To" style="width: 75px"> 
             <br><br>
             <div id="prices" class="row">Price</div>
-            <input type="number" class="input" placeholder="From" style="width: 75px">
-            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <input type="number" name="priceStart" class="input" placeholder="From" style="width: 75px">
+            <input type="number" name="priceEnd" class ="input" placeholder="To" style="width: 75px"> 
             <br><br>
             <div id="prices" class="row">Km</div>
-            <input type="number" class="input" placeholder="From" style="width: 75px">
-            <input type="number" class ="input" placeholder="To" style="width: 75px"> 
+            <input type="number" name="kmStart" class="input" placeholder="From" style="width: 75px">
+            <input type="number" name="kmEnd" class ="input" placeholder="To" style="width: 75px"> 
             <br><br>
             <div id="fuel1" class="row">Fuel</div>
             <select id="fuel" name="fuel" style="width: 180px; height: 21px;">
@@ -156,6 +157,7 @@
                 <option value="Manual">Manual</option>
                 <option value="Automatic">Automatic</option>
             </select>
+            </form>
         </div>
         <div class="divider"></div> <!-- Bară separată -->
         <div class="main-content">
@@ -163,7 +165,28 @@
             <ul>
                 <?php
                     include "../database.php";
-                    $rows = mysqli_query($conn, "SELECT * FROM Car");
+                    $sql = "SELECT * FROM Car WHERE 1=1 ";
+                    if (!empty($_POST)){
+                        if ($_POST["brand"] != "") {
+                            $elem = $_POST["brand"];
+                            $sql .= " AND brand = '$elem'";
+                        }
+                        if ($_POST["body"] != "") {
+                            $elem = $_POST["body"];
+                            $sql .= " AND body = '$elem'";
+                        }
+                        if ($_POST["yearStart"] != "") {
+                            $elem = $_POST["yearStart"];
+                            $sql .= " AND year >= '$elem'";
+                        }
+                        if ($_POST["yearEnd"] != "") {
+                            $elem = $_POST["yearEnd"];
+                            $sql .= " AND year <= '$elem'";
+                        }
+
+
+                    }
+                    $rows = mysqli_query($conn, $sql);
                 ?>
                 <?php foreach ($rows as $row) : ?>
                 <form action="carInfo.php" method="post" enctype="multipart/form-data">
@@ -174,6 +197,7 @@
                             <h2><?php echo $row['brand'] . ' ' . $row['model']; ?></h2>
                             <label id="state"><?php echo $row['state']; ?></label>
                             <p><?php echo $row['price']; ?></p>
+                            <p><?php echo $row['year']; ?></p>
                             <p id="city"><?php echo $row['city']; ?></p>
                             
                         </div>

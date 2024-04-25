@@ -1,6 +1,7 @@
 #home {
     background-color: gray;
     color: white;
+    width: 110px;
     font-size: 12px;
     width: 50px;
     /* Add more styles as needed */
@@ -17,6 +18,7 @@
     color: rgb(0, 0, 0);
     display: flex;
 }
+//////asdsadasdas
 
 .sidebar {
     width: 250px; /* Setează lățimea barei laterale */
