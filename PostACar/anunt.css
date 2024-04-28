@@ -2,59 +2,59 @@
     background-color: gray;
     color: white;
     font-size: 12px;
-    width: 70px;
-    margin-left: 300px;
+    width: 80px;
+    height: 30px;
+    margin-left: 150px;
     margin-top: 10px;
 }
 #Title{
     text-align: center;
     font-size: 40px;
+    color:rgb(170, 61, 61);
+    background-color: rgb(83, 78, 95);
+    border: 1px solid rebeccapurple;
 }
 .titlu{
     position: absolute; /* Position the container absolutely */
-    top: 150px; /* Align to the top of the container */
-    left: 800px;
+    top: 170px; /* Align to the top of the container */
+    left: 780px;
 }
 .container{
-    border: solid red;
-    overflow: auto; /* Afișează bara de defilare dacă conținutul depășește dimensiunea containerului */
-    height: auto; /* Înălțimea containerului se ajustează automat în funcție de conținut */
-    display: flex;
+    display:block;
+    margin-bottom: 20px; /* Spațiu între fiecare mașină */
+    margin: 0 auto;
+    text-align: left;
+    width: 50%; /* Lățimea containerului */
+    height: auto; /* Înălțimea containerului */
+    background: rgb(28, 25, 51); /*#adadad *//* Culoarea de fundal */
+    border: 2px solid #ccc; /* Border-ul containerului */
+    padding: 20px; /* Spațiul interior între conținut și marginile containerului */
 }
 p {
-    margin-left: 600px;
+    margin-left: 100px;
 }
 h1 {
-    margin-left: 630px;
+    margin-left: 130px;
+}
+input{
+    background-color: gainsboro;
+}
+select{
+    background-color: gainsboro;
 }
 .row{
     margin-bottom: -15px;
-    margin-left: 600px;
-}
-.rightText{
-    position: absolute; /* Position the container absolutely */
-    top: 167px; /* Align to the top of the container */
-    left: 900px; /* Align to the right side of the container */ 
+    margin-left: 100px;
+    color: #ccc;
 }
 .radio{
     position: absolute; /* Position the container absolutely */
     top: 165px; /* Align to the top of the container */
     left: 960px; /* Align to the right side of the container */ 
+    color: #ccc;
 }
-.rightInput{
-    position: absolute; /* Position the container absolutely */
-    top: 168px; /* Align to the top of the container */
-    left: 300px; /* Align to the right side of the container */ 
-}
-.rightText2{
-    position: absolute; /* Position the container absolutely */
-    top: 225px; /* Align to the top of the container */
-    left: 900px; /* Align to the right side of the container */ 
-}
-.rightInput2{
-    position: absolute; /* Position the container absolutely */
-    top: 226px; /* Align to the top of the container */
-    left: 300px; /* Align to the right side of the container */ 
+.radio input{
+    color: #ccc;
 }
 .image{
     position: absolute;
@@ -63,27 +63,29 @@ h1 {
 }
 #desc{
    margin-top:-4px; 
-   margin-left: 610px;
+   margin-left: 110px;
 }
 textarea{
-    margin-left: 600px;
-    background-color: rgb(231, 231, 231);
+    margin-left: 100px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 3%;
     resize: none;
 }
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #0d0d11;
+    background-color: rgb(37, 24, 37);
+    background-size: auto;
+    background-repeat: no-repeat; /* Împiedică repetarea imaginii de fundal */
 }
 
 .image-upload-box {
     width: 200px; /* Adjust the width as needed */
     height: 200px; /* Adjust the height as needed */
-    border: 2px solid black; /* Border color */
+    border: 2px solid rgb(0, 0, 0); /* Border color */
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Hide overflowing content */
     position: relative; /* Positioning context for absolute positioning */
 }
-/* Style for the file input field */
 
 .button{
     position: absolute;
@@ -95,4 +97,7 @@ body{
     background-color: gray; /* Button background color */
     color: #fff; /* Button text color */
     cursor: pointer; /* Change cursor to pointer on hover */
+}
+#myForm{
+    background-image: url('../img/bcg.webp');
 }

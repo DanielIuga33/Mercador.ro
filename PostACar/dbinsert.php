@@ -9,21 +9,19 @@
     $title = $_POST["title"];
     $model = $_POST["model"];
     $brand = $_POST["brand"];
-
     $vin = $_POST["vin"];
-    $price = $_POST["price"];
 
+    $tmp = $_POST["price"];
+    $elems = explode(" ", $tmp);
+    $price = intval($elems[0]);
+    $currency = $elems[1];
     $phone = $_POST["phone"];
-
     $cm3 = $_POST["cm3"];
     $hp = $_POST["hp"];
-
     $fuel = $_POST["fuel"];
     $body = $_POST["body"];
-
     $km = $_POST["km"];
     $color = $_POST["color"];
-
     $year = $_POST["year"];
     $city = $_POST["city"];
     $doors = $_POST["doors"];
@@ -71,10 +69,10 @@
     }
 
 
-    $sql = "INSERT INTO Car (title, brand, model, vin, price, phone, cm3, hp, fuel, body,
+    $sql = "INSERT INTO Car (title, brand, model, vin, currency, price, phone, cm3, hp, fuel, body,
                             km, color, year, doors, state, gearbox, steeringwheel, img, 
                             description, city)
-            VALUES ('{$title}','{$brand}', '{$model}', '{$vin}', '{$price}', '{$phone}', 
+            VALUES ('{$title}','{$brand}', '{$model}', '{$vin}', '{$currency}', '{$price}', '{$phone}', 
                     '{$cm3}', '{$hp}', '{$fuel}', '{$body}', '{$km}', '{$color}',
                     '{$year}', '{$doors}', '{$state}', '{$gearbox}', '{$steeringwheel}',
                      '{$finalImage}', '{$desc}', '{$city}')";

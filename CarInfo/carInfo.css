@@ -1,0 +1,27 @@
+.container{
+    align-self: center;
+    display: block;
+    border: 2px solid;
+    width: auto;
+    justify-content: center; /* Aliniere pe orizontală */
+    height: auto;
+}
+.container h1{
+    text-align: center;
+}
+.container img{
+    margin-left: 0;
+    display: flex;
+    border: 2px solid rgb(0, 0, 0);
+    width: auto;
+    height: 400px;
+}
+
+.car{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

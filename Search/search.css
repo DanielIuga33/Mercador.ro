@@ -1,15 +1,23 @@
 #home {
     background-color: gray;
     color: white;
-    width: 110px;
+    margin-top: 15px;
+    margin-right: 40px;
+    margin-left: 15px;
+    width: 80px;
+    height: 30px;
     font-size: 12px;
-    width: 50px;
     /* Add more styles as needed */
+}
+.bar{
+    display: flex;
 }
 .container {
     display:flex; /* Creează un layout de tip coloană */
 }
-
+header{
+    background-color: rgb(99, 135, 150);
+}
 .container h2{
     color: #ccc;
     display: flex;
@@ -21,6 +29,7 @@
 
 .sidebar {
     width: 250px; /* Setează lățimea barei laterale */
+    height: 800px;
     padding: 20px; /* Adaugă spațiu pentru elementele din bara laterală */
     background-color:#2a2a2e; /*#f0f0f0;*/ /* Culorează bara laterală din stanga*/
 }
@@ -73,8 +82,9 @@ body{
 }
 
 .car img {
-    width: 200px; /* Ajustați dimensiunile imaginii după preferință */
-    height: auto;
+    width: auto; /* Ajustați dimensiunile imaginii după preferință */
+    max-width: 600px;
+    height: 300px;
     margin-right: 20px; /* Spațiu între imagine și detalii */
 }
 

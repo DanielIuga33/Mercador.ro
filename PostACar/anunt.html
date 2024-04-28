@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="anunt.css">
 </head>
 <body>
+    <header>
+    <hr>
     <button id="homeButton"> Home </button>
+    <hr>
+    </header>
     <form id="myForm" action="dbinsert.php" method="post" enctype="multipart/form-data">
         <span class="container">
-        <div id="Title"><strong><hr>Post your car </strong></div>
-        <h1 id ="title1"> Add a title:</h1>
+        <div id="Title">Post your car</div>
+        <h1 id ="title1" style="color: #ccc;"> Add a title:</h1>
         <div class="titlu"><input type="text" id="cartitle" name="title" style="width: 190px; height: 24px;"></div>
         <div id="brand1" class="row">Brand*</div>
         <p><select id="brand" name="brand" id="brand" style="width: 180px; height: 21px;;">
@@ -171,7 +175,7 @@
         <p><input type="number" id="doorsNr" name="doors"></p>
         <hr>
         <!-- Choices -->
-        <span style="font-size: 17px;">
+        <span style="font-size: 17px; color: #7a7575;">
             <div class="row"><u>State</u></div> 
             <p><input type="radio" name="new/used" value="New" id="new"><i> New <input type="radio" name="new/used" value="Used" id="used"> Used</i></p>
 
@@ -190,7 +194,7 @@
         <div class="image">
             <div class="image-upload-box">
                 <label for="fileToUpload">
-                    <div>Select images to upload</div>
+                    <div style="color: gainsboro; text-align: center;"> Select images to upload</div>
                 </label>
             <div class="image-upload-box">
                 <input type="file" id="fileToUpload" name="image[]" accept=".jpg, .jpeg, .png" value="" multiple>

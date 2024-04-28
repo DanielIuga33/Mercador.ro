@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="carInfo.css">
 </head>
 <body>
+    <header>
+        <button id="back">Back</button>
+    </header>
 <?php
     include "../database.php";
     if (!isset($_POST)) {
@@ -20,11 +23,12 @@
     <div class="container">
         <h1><?php echo $elem['title'];?></h1>
         <?php $arr = explode(',', $elem['img']);?> 
-        <?php foreach ($arr as $e) : ?>
         <div class="car">
-        <img src="../img/<?php echo $e ?>" alt="Imagine Masina"><br> 
-        </div>
+            <?php foreach ($arr as $e) : ?>
+            <img src="../img/<?php echo $e ?>" alt="Imagine Masina"><br> 
         <?php endforeach; ?> 
+        </div>
     </div>
+    <script src="carInfo.js"></script>
 </body>
 </html>
