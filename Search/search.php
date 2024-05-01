@@ -20,8 +20,8 @@
             <!-- Filtre de căutare -->
             <h2>Filtre de Căutare</h2>
             <form action="search.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="cauta" style="background-color: #ccc; width: 242px" placeholder="Search...">
-            <button name="submit "style="background-color: gray">Caută</button>
+            <input type="text" id="cauta" name="cauta" style="background-color: #ccc; width: 242px" placeholder="Search...">
+            <button id="submit" name="submit "style="background-color: darkgray">Caută</button>
             <!-- Alte elemente de filtrare -->
             <div id="brand1" class="row">Brand</div>
             <select id="brand" name="brand" style="width: 180px; height: 21px;">
@@ -132,6 +132,10 @@
                 <option value="Monovolum">Monovolum</option>
                 <option value="SUV">SUV</option>
             </select><br>
+            <div id="km" class="row">Milleage</div>
+            <input type="number" name="kmStart" class="input" placeholder="From" style="width: 75px">
+            <input type="number" name="kmEnd" class ="input" placeholder="To" style="width: 75px"> 
+            <br><br>
             <div id="years" class="row">Year of fabricatiom</div>
             <input type="number" name="yearStart" class="input" placeholder="From" style="width: 75px">
             <input type="number" name="yearEnd" class ="input" placeholder="To" style="width: 75px"> 
@@ -139,10 +143,6 @@
             <div id="prices" class="row">Price</div>
             <input type="number" name="priceStart" class="input" placeholder="From" style="width: 75px">
             <input type="number" name="priceEnd" class ="input" placeholder="To" style="width: 75px"> 
-            <br><br>
-            <div id="prices" class="row">Km</div>
-            <input type="number" name="kmStart" class="input" placeholder="From" style="width: 75px">
-            <input type="number" name="kmEnd" class ="input" placeholder="To" style="width: 75px"> 
             <br><br>
             <div id="fuel1" class="row">Fuel</div>
             <select id="fuel" name="fuel" style="width: 180px; height: 21px;">
@@ -172,7 +172,7 @@
                     $sql = "SELECT * FROM Car WHERE 1=1 ";
                     if (!empty($_POST)){
                         if ($_POST["cauta"] != "") {
-                            $cauta = $_POST["cauta"];
+                            $cauta = strtolower($_POST["cauta"]);
                         }
                         if ($_POST["brand"] != "") {
                             $elem = $_POST["brand"];
@@ -181,6 +181,14 @@
                         if ($_POST["body"] != "") {
                             $elem = $_POST["body"];
                             $sql .= " AND body = '$elem'";
+                        }
+                        if ($_POST["kmStart"] != "") {
+                            $elem = $_POST["kmStart"];
+                            $sql .= " AND km >= '$elem'";
+                        }
+                        if ($_POST["kmEnd"] != "") {
+                            $elem = $_POST["kmEnd"];
+                            $sql .= " AND km <= '$elem'";
                         }
                         if ($_POST["yearStart"] != "") {
                             $elem = $_POST["yearStart"];
@@ -198,14 +206,6 @@
                             $elem = $_POST["kmEnd"];
                             $sql .= " AND km <= '$elem'";
                         }
-                        if ($_POST["kmStart"] != "") {
-                            $elem = $_POST["kmStart"];
-                            $sql .= " AND km >= '$elem'";
-                        }
-                        if ($_POST["kmEnd"] != "") {
-                            $elem = $_POST["kmEnd"];
-                            $sql .= " AND km <= '$elem'";
-                        }
                         if ($_POST["fuel"] != "") {
                             $elem = $_POST["fuel"];
                             $sql .= " AND fuel = '$elem'";
@@ -217,7 +217,7 @@
                     }
                     $rows = mysqli_query($conn, $sql);
                 ?>
-                <?php foreach ($rows as $row) : if ($cauta != "" && strpos($row["title"], $cauta) === false){continue;}?>
+                <?php foreach ($rows as $row) : if ($cauta != "" && strpos(strtolower($row["title"]), $cauta) === false){continue;}?>
                 <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
                     <div class="car" onclick="this.parentNode.submit()">
@@ -227,6 +227,7 @@
                             <label id="state"><?php echo $row['state']; ?></label>
                             <p><?php echo $row['price'] . $row['currency']; ?></p>
                             <p><?php echo $row['year']; ?></p>
+                            <p><?php echo $row['km'] . " km"; ?></p><br><br>
                             <p id="city"><?php echo $row['city']; ?></p>
                             
                         </div>

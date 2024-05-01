@@ -1,18 +1,31 @@
+#back{
+    margin-left: 20px;
+    width: 60px;
+    height: 27px;
+}
 .container{
-    align-self: center;
     display: block;
     border: 2px solid;
+    border-radius: 20px;
     width: auto;
-    justify-content: center; /* Aliniere pe orizontală */
     height: auto;
+    justify-content: center; /* Aliniere pe orizontală */
+    background-color: rgb(92, 91, 91);
 }
 .container h1{
+    display:  inline-block;
+    color:rgb(0, 0, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:snow;
+    margin-inline: auto;
+}
+.title{
     text-align: center;
 }
 .container img{
     margin-left: 0;
     display: flex;
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     width: auto;
     height: 400px;
 }
@@ -24,4 +37,47 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+body{
+    background-color: rgb(48, 47, 47);
+}
+.box{
+    display: flex;
+    justify-content: center;
+}
+.box p{
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bold{
+    font-weight: bold;
+}
+.box1{
+    border: 2px solid rgb(65, 65, 65);
+    display: block;
+    width: 400px;
+    background-color:silver;
+}
+.box2{
+    border: 2px solid rgb(65, 65, 65);
+    display: block;
+    width: 400px;
+    background-color:snow;
+    align-content: center;
+}
+.box3{
+    border: 2px solid rgb(65, 65, 65);
+    display: block;
+    width: 400px;
+    background-color:snow;
+    align-content: center;
+}
+.box4{
+    border: 2px solid rgb(65, 65, 65);
+    display: block;
+    width: 400px;
+    background-color:snow;
+    align-content: center;
+}
+
 
