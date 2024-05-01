@@ -12,7 +12,9 @@ a {
     color:black; /* Specify the desired font color */
 }
 button{
-    background-color: transparent;
+    background-color: white;
+    border: 5px solid coral
+    
 }
 body {
     background-image:  url('homepage.jpg');

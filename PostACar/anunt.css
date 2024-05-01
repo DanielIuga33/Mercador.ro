@@ -1,18 +1,20 @@
 #homeButton{
-    background-color: gray;
+    background-color: rgba(228, 26, 26, 0.758);
     color: white;
-    font-size: 12px;
-    width: 80px;
-    height: 30px;
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
     margin-left: 150px;
     margin-top: 10px;
+    font-style: italic;
 }
 #Title{
     text-align: center;
     font-size: 40px;
-    color:rgb(170, 61, 61);
-    background-color: rgb(83, 78, 95);
-    border: 1px solid rebeccapurple;
+    font-style: italic;
+    color:rgb(210, 43, 43);
+    background-color: rgba(21, 20, 22, 0.043);
+    border: 2px solid rgb(255, 255, 255);
 }
 .titlu{
     position: absolute; /* Position the container absolutely */
@@ -26,7 +28,7 @@
     text-align: left;
     width: 50%; /* Lățimea containerului */
     height: auto; /* Înălțimea containerului */
-    background: rgb(28, 25, 51); /*#adadad *//* Culoarea de fundal */
+    background: rgb(0, 0, 0); /*#adadad *//* Culoarea de fundal */
     border: 2px solid #ccc; /* Border-ul containerului */
     padding: 20px; /* Spațiul interior între conținut și marginile containerului */
 }
@@ -58,8 +60,9 @@ select{
 }
 .image{
     position: absolute;
+    
     top: 320px; /* Align to the top of the container */
-    left: 900px; /* Align to the right side of the container */ 
+    left: 800px; /* Align to the right side of the container */ 
 }
 #desc{
    margin-top:-4px; 
@@ -73,15 +76,15 @@ textarea{
 }
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(37, 24, 37);
+    background-color: black/*rgb(37, 24, 37)*/;
     background-size: auto;
     background-repeat: no-repeat; /* Împiedică repetarea imaginii de fundal */
 }
 
 .image-upload-box {
-    width: 300px; /* Adjust the width as needed */
+    width: 350px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
-    border: 2px solid rgb(0, 0, 0); /* Border color */
+    border: 2px solid rgb(255, 255, 255); /* Border color */
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Hide overflowing content */
     position: relative; /* Positioning context for absolute positioning */
@@ -90,14 +93,14 @@ body{
 .button{
     position: absolute;
     top: 350px;
-    width: 150px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
-    padding: 10px; /* Adjust padding as needed */
+    width: 90px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    padding: 6px; /* Adjust padding as needed */
     font-size: 16px; /* Adjust font size as needed */
-    background-color: gray; /* Button background color */
+    background-color: rgb(191, 9, 9); /* Button background color */
     color: #fff; /* Button text color */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 #myForm{
-    background-image: url('../img/bcg.webp');
+    background-image: url('../img/bccc.jpeg');
 }
