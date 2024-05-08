@@ -35,6 +35,8 @@
         echo
         "<script> alert('Image Does Not Exist');</script>"
         ;
+        header("Location: ../PostACar/anunt.html");
+
     }
     else{
         $finalImage = "";

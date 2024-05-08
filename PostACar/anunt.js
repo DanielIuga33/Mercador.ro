@@ -100,6 +100,23 @@ document.getElementById('submit').addEventListener('click', function(event){
         window.alert("Your car was succesfully Published !");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Selectăm inputul de fișier
+    var fileInput = document.getElementById('fileToUpload');
+    
+    // Adăugăm un eveniment pentru a gestiona schimbările în inputul de fișier
+    fileInput.addEventListener('change', function(event) {
+        var files = event.target.files; // Obținem lista de fișiere selectate
+
+        // Verificăm dacă numărul de fișiere selectate depășește limita
+        if (files.length > 8) {
+            alert("The maximum number of images you can upload is 8.");
+            // Resetează inputul de fișier pentru a elimina fișierele suplimentare
+            this.value = "";
+        }
+    });
+});
 document.getElementById("homeButton").onclick = function(){
 
     window.location.href = "../Home/index.html";

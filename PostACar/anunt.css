@@ -18,7 +18,7 @@
 }
 .titlu{
     position: absolute; /* Position the container absolutely */
-    top: 170px; /* Align to the top of the container */
+    top: 180px; /* Align to the top of the container */
     left: 780px;
 }
 .container{

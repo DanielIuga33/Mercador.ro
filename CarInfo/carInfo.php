@@ -32,12 +32,15 @@
         <?php endforeach; ?> 
         </div>
         <div class = box>
+            <?php if ($elem['description'] != ""){?>
             <div class="box1">
             <p><span class="bold"> Description:</span>  <?php echo $elem['description'];?></p>
             </div>
+            <?php }?>
             <div class="box2">
                 <p> <span class="bold"> Brand:</span> <?php echo $elem['brand']?> </p>
                 <p> <span class="bold"> Model:</span> <?php echo $elem['model']?> </p>
+                <p> <span class="bold"> Milleage:</span> <?php echo $elem['km']?> </p>
                 <p> <span class="bold"> VIN:</span> <?php echo $elem['vin']?> </p>
                 <p> <span class="bold"> Price:</span> <?php echo $elem['price'] . $elem['currency']?> </p>
                 <p> <span class="bold"> Engine capacity:</span> <?php echo $elem['cm3'] . ' cm3'?> </p>
@@ -56,6 +59,7 @@
                 <p> <span class="bold"> Location :</span> <?php echo $elem['city']?></p>
             </div>
         </div>
+        <br>
     </div>
     <hr>
     <script src="carInfo.js"></script>

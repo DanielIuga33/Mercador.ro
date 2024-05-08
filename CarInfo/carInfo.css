@@ -18,6 +18,7 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color:snow;
     margin-inline: auto;
+    border-radius: 8%;
 }
 .title{
     text-align: center;
@@ -79,5 +80,24 @@ body{
     background-color:snow;
     align-content: center;
 }
+img.enlarged {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.8); /* culoarea fundalului transparent */
+    z-index: 9999;
+    cursor: pointer;
+}
 
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
 

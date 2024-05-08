@@ -217,7 +217,7 @@
                     }
                     $rows = mysqli_query($conn, $sql);
                 ?>
-                <?php foreach ($rows as $row) : if ($cauta != "" && strpos(strtolower($row["title"]), $cauta) === false){continue;}?>
+                <?php $i=0; foreach ($rows as $row) : if ($cauta != "" && strpos(strtolower($row["title"]), $cauta) === false){continue;}?>
                 <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
                     <div class="car" onclick="this.parentNode.submit()">
@@ -229,12 +229,18 @@
                             <p><?php echo $row['year']; ?></p>
                             <p><?php echo $row['km'] . " km"; ?></p><br><br>
                             <p id="city"><?php echo $row['city']; ?></p>
+                            <?php $i++; ?>
                             
                         </div>
                     </div>
                 </form>
                 <br>
                 <?php endforeach; ?>
+                <?php if ($i === 0){ ?>
+                    <div class="grid">
+                    <h3 for="text"> Nothing to show !</h3>
+                    </div>
+                <?php }?>
             </ul>
         </div>
     </div>
