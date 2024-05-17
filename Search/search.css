@@ -1,17 +1,41 @@
 #home {
-    background-color: gray;
+    background-color: hsl(0, 0%, 45%);
     color: white;
     margin-top: 15px;
     margin-right: 40px;
     margin-left: 15px;
-    width: 80px;
-    height: 30px;
-    font-size: 12px;
-    /* Add more styles as needed */
+    width: 100px;
+    height: 35px;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#home:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+#cauta{
+    height: 20px;
+    background-color: hsl(0, 0%, 80%);
+    width: 242px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#cauta:focus {
+    border: 2px solid hsl(0, 0%, 0%); /* Schimbă bordura la culoarea verde */
+    background-color: hsl(0, 0%, 65%);
+    outline: none;
 }
 #submit{
     height: 25px;
     font-weight: 600;
+    background-color: hsl(0, 0%, 40%);
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: hsl(0, 0%, 35%);
 }
 .bar{
     display: flex;
@@ -53,10 +77,11 @@ header{
 }
 
 .main-content {
-    flex-grow: 1; /* Asigură ca conținutul principal să ocupe spațiul rămas */
-    padding: 20px; /* Adaugă spațiu pentru elementele din conținutul principal */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
 }
-
 /* Stilizare pentru elementele de căutare */
 input[type="text"],
 button {
@@ -73,16 +98,22 @@ body{
 }
 
 .car {
+    border-radius: 5px;
     display: flex;
     align-items: center; /* Alinează imaginea și detaliile pe axa verticală */
     margin-bottom: 20px; /* Spațiu între fiecare mașină */
 
     width: 700px; /* Lățimea containerului */
     height: auto; /* Înălțimea containerului */
-    background-color:#404062; /*#adadad *//* Culoarea de fundal */
+    background-color:hsl(0, 55%, 19%); /*#adadad *//* Culoarea de fundal */
     border: 2px transparent #707070; /* Border-ul containerului */
     padding: 20px; /* Spațiul interior între conținut și marginile containerului */
     margin: 3px; /* Centrarea containerului pe pagină */
+    cursor: pointer;
+    border: 2px solid black;
+}
+.car:hover{
+    background-color:hsl(0, 55%, 14%);
 }
 
 .car img {

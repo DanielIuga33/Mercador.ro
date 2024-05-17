@@ -8,204 +8,211 @@
 </head>
 <body>
     <header>
-    <hr>
     <button id="homeButton"> Home </button>
-    <hr>
     </header>
     <form id="myForm" action="dbinsert.php" method="post" enctype="multipart/form-data">
         <span class="container">
-        <div id="Title">Post your car</div>
-        <h1 id ="title1" style="color: #ccc;"> Add a title:</h1>
-        <div class="titlu"><input type="text" id="cartitle" name="title" style="width: 190px; height: 24px;"></div>
-        <div id="brand1" class="row">Brand*</div>
-        <p><select id="brand" name="brand" id="brand" style="width: 180px; height: 21px;;">
-            <option value="" selected>see all</option>
-            <option value="Abart">Abart</option>
-            <option value="Acura">Acura</option>
-            <option value="Aixam">Aixam</option>
-            <option value="Alfa Romeo">Alfa Romeo</option>
-            <option value="Aro">Aro</option>
-            <option value="Aston Martin">Aston Martin</option>
-            <option value="Audi">Audi</option>
-            <option value="Austin">Austin</option>
-            <option value="Baic">Baic</option>
-            <option value="Bentley">Bentley</option>
-            <option value="BMW">BMW</option>
-            <option value="Bugatti">Bugatti</option>
-            <option value="Buick">Buick</option>
-            <option value="Cadillac">Cadillac</option>
-            <option value="Chevrolet">Chevrolet</option>
-            <option value="Chrysler">Chrysler</option>
-            <option value="Citroen">Citroen</option>
-            <option value="Comarth">Comarth</option>
-            <option value="Dacia">Dacia</option>
-            <option value="Daewoo">Daewoo</option>
-            <option value="Daihatsu">Daihatsu</option>
-            <option value="DFSK">DFSK</option>
-            <option value="Dodge">Dodge</option>
-            <option value="Ferrari">Ferrari</option>
-            <option value="Fiat">Fiat</option>
-            <option value="Fisker">Fisker</option>
-            <option value="Ford">Ford</option>
-            <option value="Minibus">Minibus</option>
-            <option value="Honda">Honda</option>
-            <option value="Hummer">Hummer</option>
-            <option value="Hyundai">Hyundai</option>
-            <option value="Ineos">Ineos</option>
-            <option value="Infiniti">Infiniti</option>
-            <option value="Isuzu">Isuzu</option>
-            <option value="Jaguar">Jaguar</option>
-            <option value="Jeep">Jeep</option>
-            <option value="KG Mobility">KG Mobility</option>
-            <option value="Kia">Kia</option>
-            <option value="Lada">Lada</option>
-            <option value="Lamborghini">Lamborghini</option>
-            <option value="Lancia">Lancia</option>
-            <option value="Land Rover">Land Rover</option>
-            <option value="Lexus">Lexus</option>
-            <option value="Ligier">Ligier</option>
-            <option value="Lincoln">Lincoln</option>
-            <option value="Lotus">Lotus</option>
-            <option value="Lucid">Lucid</option>
-            <option value="Lynk&Co">Lynk&Co</option>
-            <option value="Maserati">Maserati</option>
-            <option value="Mazda">Mazda</option>
-            <option value="McLaren">McLaren</option>
-            <option value="Maybach">Maybach</option>
-            <option value="Merceds-Benz">Merceds-Benz</option>
-            <option value="MG">MG</option>
-            <option value="Microlinio">Microlinio</option>
-            <option value="Mini">Mini</option>
-            <option value="Mitsubishi">Mitsubishi</option>
-            <option value="Microcar">Microcar</option>
-            <option value="Morgan">Morgan</option>
-            <option value="Nissan">Nissan</option>
-            <option value="Opel">Opel</option>
-            <option value="Peugeot">Peugeot</option>
-            <option value="Plymouth">Plymouth</option>
-            <option value="Pontiac">Pontiac</option>
-            <option value="Porsche">Porsche</option>
-            <option value="Renault">Renault</option>
-            <option value="Rolls-Royce">Rolls-Royce</option>
-            <option value="Rover">Rover</option>
-            <option value="Saab">Saab</option>
-            <option value="Seat">Seat</option>
-            <option value="Skoda">Skoda</option>
-            <option value="Smart">Smart</option>
-            <option value="SsangYong">SsangYong</option>
-            <option value="Skywell">Skywell</option>
-            <option value="Subaru">Subaru</option>
-            <option value="Suzuki">Suzuki</option>
-            <option value="Tesla">Tesla</option>
-            <option value="Tata">Tata</option>
-            <option value="Tazzari">Tazzari</option>
-            <option value="Toyota">Toyota</option>
-            <option value="Trabant">Trabant</option>
-            <option value="Triumph">Triumph</option>
-            <option value="Vauxhall">Vauxhall</option>
-            <option value="Volkswagen">Volkswagen</option>
-            <option value="Volvo">Volvo</option>
-            <option value="Weismann">Weismann</option>
-            <option value="Alte marci">Alte marci</option>
-            <option value="JAC">JAC</option>
-            <option value="SWM">SWM</option>
-            <option value="Forthing">Forthing</option>
-            <option value="XEV">XEV</option>
-        </select></p>
+            <div id="Title">Post your car</div>
+            <div class="car-title">
+                <h1 id ="title1"> Add a title:</h1>
+                <div class="titlu"><input type="text" id="cartitle" name="title"></div>
+            </div>
+            <div class ="sidebar">
+                <div class="left-sidebar">
+                    <div id="brand1" class="row">Brand*</div>
+                    <p><select id="brand" name="brand" id="brand" style="width: 170px; height: 21px;">
+                        <option value="" selected>see all</option>
+                        <option value="Abart">Abart</option>
+                        <option value="Acura">Acura</option>
+                        <option value="Aixam">Aixam</option>
+                        <option value="Alfa Romeo">Alfa Romeo</option>
+                        <option value="Aro">Aro</option>
+                        <option value="Aston Martin">Aston Martin</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Austin">Austin</option>
+                        <option value="Baic">Baic</option>
+                        <option value="Bentley">Bentley</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Bugatti">Bugatti</option>
+                        <option value="Buick">Buick</option>
+                        <option value="Cadillac">Cadillac</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Chrysler">Chrysler</option>
+                        <option value="Citroen">Citroen</option>
+                        <option value="Comarth">Comarth</option>
+                        <option value="Dacia">Dacia</option>
+                        <option value="Daewoo">Daewoo</option>
+                        <option value="Daihatsu">Daihatsu</option>
+                        <option value="DFSK">DFSK</option>
+                        <option value="Dodge">Dodge</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Fisker">Fisker</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hummer">Hummer</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Ineos">Ineos</option>
+                        <option value="Infiniti">Infiniti</option>
+                        <option value="Isuzu">Isuzu</option>
+                        <option value="Jaguar">Jaguar</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="KG Mobility">KG Mobility</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Lada">Lada</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Lancia">Lancia</option>
+                        <option value="Land Rover">Land Rover</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Ligier">Ligier</option>
+                        <option value="Lincoln">Lincoln</option>
+                        <option value="Lotus">Lotus</option>
+                        <option value="Lucid">Lucid</option>
+                        <option value="Lynk&Co">Lynk&Co</option>
+                        <option value="Maserati">Maserati</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="McLaren">McLaren</option>
+                        <option value="Maybach">Maybach</option>
+                        <option value="Merceds-Benz">Merceds-Benz</option>
+                        <option value="MG">MG</option>
+                        <option value="Microlinio">Microlinio</option>
+                        <option value="Mini">Mini</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="Microcar">Microcar</option>
+                        <option value="Morgan">Morgan</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Peugeot">Peugeot</option>
+                        <option value="Plymouth">Plymouth</option>
+                        <option value="Pontiac">Pontiac</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Rolls-Royce">Rolls-Royce</option>
+                        <option value="Rover">Rover</option>
+                        <option value="Saab">Saab</option>
+                        <option value="Seat">Seat</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Smart">Smart</option>
+                        <option value="SsangYong">SsangYong</option>
+                        <option value="Skywell">Skywell</option>
+                        <option value="Subaru">Subaru</option>
+                        <option value="Suzuki">Suzuki</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Tazzari">Tazzari</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Trabant">Trabant</option>
+                        <option value="Triumph">Triumph</option>
+                        <option value="Vauxhall">Vauxhall</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Weismann">Weismann</option>
+                        <option value="Alte marci">Alte marci</option>
+                        <option value="JAC">JAC</option>
+                        <option value="SWM">SWM</option>
+                        <option value="Forthing">Forthing</option>
+                        <option value="XEV">XEV</option>
+                    </select></p>
 
-        <div id="model1" class="row">Model*</div> 
-        <p><input type="text" id="model" name="model"></p>
+                    <div id="model1" class="row">Model*</div> 
+                    <p><input type="text" id="model" name="model"></p>
 
-        <div class="row">Chassis series[VIN]</div> 
-        <p><input type="text" id="vin" name="vin"></p>
+                    <div class="row">Chassis series[VIN]</div> 
+                    <p><input type="text" id="vin" name="vin"></p>
 
-        <div id="price1" class="row">Price*</div><br>
-        <div class="row"><input type="radio" name="curr" id="euro"> Euro <input type="radio" name="curr" id="ron"> Ron</div>
-        <p><input type="text" id="price" name="price"></p></div>
+                    <div id="price1" class="row">Price*</div><br>
+                    <div class="row"><input type="radio" name="curr" id="euro"> Euro <input type="radio" name="curr" id="ron"> Ron</div>
+                    <p><input type="text" id="price" name="price"></p>
 
 
-        <div id="city1" class="row">City/County*</div>
-        <p><input type="text" id="city" name="city"></p></div>
+                    <div id="city1" class="row">City/County*</div>
+                    <p><input type="text" id="city" name="city"></p>
 
-        <div id="phone1" class="row">Phone number*</div>
-        <p><input type="text" id="phone" name="phone"></p></div>
-        
-        <div class="row">Engine capacity*</div> 
-        <p><input type="text" id="cm3" name="cm3" placeholder="cm³"></p>
+                    <div id="phone1" class="row">Phone number*</div>
+                    <p><input type="text" id="phone" name="phone"></p>
+                    
+                    <div class="row">Engine capacity*</div> 
+                    <p><input type="text" id="cm3" name="cm3" placeholder="cm³"></p>
 
-        <div class="row">Engine Power</div> 
-        <p><input type="text" id="power" name="hp" placeholder="CP"></p>
+                    <div class="row">Engine Power</div> 
+                    <p><input type="text" id="power" name="hp" placeholder="CP"></p>
 
-        <div id="fuel1" class="row">Fuel Type*</div> 
-        <p><select id="fuel" name="fuel" style="width: 180px; height: 21px;">
-            <option value="" selected>choose</option>
-            <option value="Diesel">Diesel</option>
-            <option value="Petrol">Petrol</option>
-            <option value="Electric">Electric</option>
-            <option value="Hybrid">Hybrid</option>
-        </select></p>
-        </div>
+                    <div id="fuel1" class="row">Fuel Type*</div> 
+                    <p><select id="fuel" name="fuel" style="width: 170px; height: 21px;">
+                        <option value="" selected>choose</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select></p>
 
-        <div id="body1" class="row">Car Body*</div> 
-        <p><select id="body" name="body" style="width: 180px; height: 21px;">
-            <option value="" selected>choose</option>
-            <option value="Cabrio">Cabrio</option>
-            <option value="Sedan">Sedan</option>
-            <option value="Coupe">Coupe</option>
-            <option value="Pickup">Pickup</option>
-            <option value="HatchBack">HatchBack</option>
-            <option value="Break">Break</option>
-            <option value="Off-road">Off-road</option>
-            <option value="Minibus">Minibus</option>
-            <option value="Monovolum">Monovolum</option>
-            <option value="SUV">SUV</option>
-        </select></p>
-        </div>
+                    <div id="body1" class="row">Car Body*</div> 
+                    <p><select id="body" name="body" style="width: 170px; height: 21px;">
+                        <option value="" selected>choose</option>
+                        <option value="Cabrio">Cabrio</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="HatchBack">HatchBack</option>
+                        <option value="Break">Break</option>
+                        <option value="Off-road">Off-road</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Monovolum">Monovolum</option>
+                        <option value="SUV">SUV</option>
+                    </select></p>
 
-        <div class="row">Milleage</div> 
-        <p><input type="text" id="km" name="km" placeholder="km"></p>
+                    <div class="row">Milleage</div> 
+                    <p><input type="text" id="km" name="km" placeholder="km"></p>
 
-        <div class="row">Color</div> 
-        <p><input type="text" id="color" name="color"></p>
+                    <div class="row">Color</div> 
+                    <p><input type="text" id="color" name="color"></p>
 
-        <div id="year1" class="row">Year of fabrication*</div> 
-        <p><input type="number" id="year" name="year"></p>
+                    <div id="year1" class="row">Year of fabrication*</div> 
+                    <p><input type="number" id="year" name="year"></p>
 
-        <div class="row">Number of doors</div> 
-        <p><input type="number" id="doorsNr" name="doors"></p>
-        <hr>
-        <!-- Choices -->
-        <span style="font-size: 17px; color: #7a7575;">
-            <div class="row"><u>State</u></div> 
-            <p><input type="radio" name="new/used" value="New" id="new"><i> New <input type="radio" name="new/used" value="Used" id="used"> Used</i></p>
+                    <div class="row">Number of doors</div> 
+                    <p><input type="number" id="doorsNr" name="doors"></p>
+                </div>
+                <div class="divider"></div> 
+                <div class="right-sidebar">
+                    <!-- Image -->
+                    <div class="image">
+                        <div class="image-upload-box">
+                            <label for="fileToUpload">
+                                <div style="color: gainsboro; text-align: center;"> Select images to upload (max. 8)</div>
+                            </label>
+                            <div class="image-upload-box">
+                                <input type="file" id="fileToUpload" name="image[]" accept=".jpg, .jpeg, .png" value="" multiple>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Choices -->
+                    <div class="choice">
+                        <span style="font-size: 17px; color: #7a7575;">
+                            <div class="row"><u>State</u></div> 
+                            <p><input type="radio" name="new/used" value="New" id="new"><i> New <input type="radio" name="new/used" value="Used" id="used"> Used</i></p>
 
-            <div class="row"><u>Gearbox type</u></div> 
-            <p><input type="radio" name="man/aut" value="Automatic" id="automatic"><i> Automatic <input type="radio" name="man/aut" value="Manual" id="manual"> Manual</i></p>
+                            <div class="row"><u>Gearbox type</u></div> 
+                            <p><input type="radio" name="man/aut" value="Automatic" id="automatic"><i> Automatic <input type="radio" name="man/aut" value="Manual" id="manual"> Manual</i></p>
 
-            <div class="row"><u>Steering Wheel</u></div> 
-            <p><input type="radio" name="lf/rg" value="Left" id="leftSide"> Left Side <input type="radio" name="lf/rg" value="Right" id="rightSide"><i> Right Side</i></p>
+                            <div class="row"><u>Steering Wheel</u></div> 
+                            <p><input type="radio" name="lf/rg" value="Left" id="leftSide"> Left Side <input type="radio" name="lf/rg" value="Right" id="rightSide"><i> Right Side</i></p>
+                        </span>
+                    </div>
+                    <!-- Description -->
+                    <div id="desc" class="row">Description*</div><br>
+                    <textarea name="description" id="description" cols="50" rows="10"></textarea>
+                    <p id="desc" style="color: #ccc">Write at least 40 words.</p>
+                    <button class="button" id="submit">Submit</button>
+                </div>
+            </div>
         </span>
-
-        <!-- Description -->
-        <div id="desc" class="row">Description*</div><br>
-        <textarea name="description" id="description" cols="50" rows="10"></textarea>
-        <p id="desc" style="color: #ccc">Write at least 40 words.</p>
-        <!-- Image -->
-        <div class="image">
-            <div class="image-upload-box">
-                <label for="fileToUpload">
-                    <div style="color: gainsboro; text-align: center;"> Select images to upload (max. 8)</div>
-                </label>
-            <div class="image-upload-box">
-                <input type="file" id="fileToUpload" name="image[]" accept=".jpg, .jpeg, .png" value="" multiple>
-            </div>
-                
-            </div>
-            <button class="button" id="submit">Submit</button>
-        </div>
-    </span>
     </form>
-    <hr>
+    <footer>
+        <p style="text-align: center; color: #ccc;">&copy; 2024 Car Posting Site. All rights reserved.</p>
+    </footer>
         <script src="anunt.js"></script>
 </body>
 </html>

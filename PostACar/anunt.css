@@ -1,12 +1,27 @@
+header,
+footer{
+    border: 2px solid white;
+    height: 60px;
+    background-color: hsl(0, 0%, 5%);
+    border-radius: 10px;
+}
+
 #homeButton{
-    background-color: rgba(228, 26, 26, 0.758);
+    background-color: hsla(0, 80%, 50%, 0.758);
     color: white;
+    font-family: Arial, sans-serif;
     font-size: 16px;
-    width: 90px;
+    border-radius: 5px;
+    width: 120px;
     height: 40px;
     margin-left: 150px;
     margin-top: 10px;
     font-style: italic;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#homeButton:hover{
+    background-color: hsla(0, 80%, 40%, 0.758);
 }
 #Title{
     text-align: center;
@@ -16,21 +31,73 @@
     background-color: rgba(21, 20, 22, 0.043);
     border: 2px solid rgb(255, 255, 255);
 }
-.titlu{
-    position: absolute; /* Position the container absolutely */
-    top: 180px; /* Align to the top of the container */
-    left: 780px;
+
+.car-title h1{
+    color: #ccc;
+    display: inline-block;
+    vertical-align: middle;
 }
+.car-title .titlu {
+    display: inline-block;
+    vertical-align: middle; /* Pentru alinierea verticală a elementelor */
+    border: 2px solid;
+}
+#cartitle{
+    width: 300px;
+    height: 30px;
+}
+
 .container{
     display:block;
-    margin-bottom: 20px; /* Spațiu între fiecare mașină */
+    margin-bottom: 20px;
     margin: 0 auto;
     text-align: left;
     width: 50%; /* Lățimea containerului */
-    height: auto; /* Înălțimea containerului */
+    height: 105vh; /* Înălțimea containerului */
     background: rgb(0, 0, 0); /*#adadad *//* Culoarea de fundal */
     border: 2px solid #ccc; /* Border-ul containerului */
     padding: 20px; /* Spațiul interior între conținut și marginile containerului */
+}
+.sidebar .image{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    vertical-align:middle;
+}
+.sidebar .left-sidebar{
+    width: 400px;
+}
+.right-sidebar{
+    margin-left: 100px;
+}
+.divider {
+    width: 2px; /* Lățimea barei */
+    display: block;
+    background-color: #ccc; /* Culorează bara */
+}
+.sidebar{
+    display: flex;
+}
+.choice .row,
+.choice p{
+    display: flex;
+    margin-left: 0px;
+}
+.button{
+    float: right;
+    font-family: Arial, sans-serif;
+    border: 4px solid hsl(0, 0%, 20%);
+    width: 190px; /* Adjust the width as needed */
+    height: 35px; /* Adjust the height as needed */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    background-color: hsl(0, 91%, 39%); /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: 0.25s ease;
+}
+.button:hover{
+    background-color: hsl(0, 91%, 34%);
 }
 p {
     margin-left: 100px;
@@ -40,6 +107,9 @@ h1 {
 }
 input{
     background-color: gainsboro;
+}
+input[type="file"]{
+    cursor: pointer;
 }
 select{
     background-color: gainsboro;
@@ -58,18 +128,11 @@ select{
 .radio input{
     color: #ccc;
 }
-.image{
-    position: absolute;
-    
-    top: 320px; /* Align to the top of the container */
-    left: 800px; /* Align to the right side of the container */ 
-}
 #desc{
    margin-top:-4px; 
-   margin-left: 110px;
+   margin-left: 0px;
 }
 textarea{
-    margin-left: 100px;
     background-color: rgb(179, 179, 179);
     border-radius: 3%;
     resize: none;
@@ -88,18 +151,6 @@ body{
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Hide overflowing content */
     position: relative; /* Positioning context for absolute positioning */
-}
-
-.button{
-    position: absolute;
-    top: 350px;
-    width: 90px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    padding: 6px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    background-color: rgb(191, 9, 9); /* Button background color */
-    color: #fff; /* Button text color */
-    cursor: pointer; /* Change cursor to pointer on hover */
 }
 #myForm{
     background-image: url('../img/bccc.jpeg');

@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton.classList.add('close-btn');
 
             // Adaugă imaginea mărită și butonul de închidere la body
-            document.body.appendChild(enlargedImage);
             document.body.appendChild(closeButton);
+            document.body.appendChild(enlargedImage);
 
             // Închide imaginea mărită atunci când utilizatorul dă clic pe ea sau pe butonul de închidere
             function closeEnlargedImage() {
