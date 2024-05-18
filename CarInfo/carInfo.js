@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.body.removeChild(closeButton);
             }
 
-            enlargedImage.addEventListener('click', closeEnlargedImage);
+            //enlargedImage.addEventListener('click', closeEnlargedImage);
             closeButton.addEventListener('click', closeEnlargedImage);
         });
     });
 });
+

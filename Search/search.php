@@ -167,7 +167,7 @@
         <div class="divider"></div> <!-- Bară separată -->
         <div class="main-content">
             <!-- Conținutul principal al paginii -->
-            <ul>
+            <ul class="flex-container">
                 <?php
                 include "../database.php";
                 $cauta = "";
@@ -223,23 +223,24 @@
                 foreach ($rows as $row) : if ($cauta != "" && strpos(strtolower($row["title"]), $cauta) === false) {
                         continue;
                     } ?>
-                    <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
-                        <div class="car" onclick="this.parentNode.submit()">
-                            <img src="../img/<?php $arr = explode(',', $row['img']);
-                                                echo $arr[0]; ?>" alt="Imagine mașină">
-                            <div class="car-details">
-                                <h2><?php echo $row['title'] ?></h2>
-                                <label id="state"><?php echo $row['state']; ?></label>
-                                <p><?php echo $row['price'] . $row['currency']; ?></p>
-                                <p><?php echo $row['year']; ?></p>
-                                <p><?php echo $row['km'] . " km"; ?></p><br><br>
-                                <p id="city"><?php echo $row['city']; ?></p>
-                                <?php $i++; ?>
-
+                    <li>
+                        <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
+                            <div class="car" onclick="this.parentNode.submit()">
+                                <img src="../img/<?php $arr = explode(',', $row['img']);
+                                                    echo end($arr); ?>" alt="Imagine mașină">
+                                <div class="car-details">
+                                    <h2><?php echo $row['title'] ?></h2>
+                                    <label id="state"><?php echo $row['state']; ?></label>
+                                    <p><?php echo $row['price'] . $row['currency']; ?></p>
+                                    <p><?php echo $row['year']; ?></p>
+                                    <p><?php echo $row['km'] . " km"; ?></p><br><br>
+                                    <p id="city"><?php echo $row['city']; ?></p>
+                                    <?php $i++; ?>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </li>
                     <br>
                 <?php endforeach; ?>
                 <?php if ($i === 0) { ?>
@@ -252,6 +253,7 @@
     </div>
     <footer>
         <hr>
+        <p>&copy; 2024 Car Posting Site. All rights reserved.</p>
     </footer>
     <script src="search.js"></script>
 </body>

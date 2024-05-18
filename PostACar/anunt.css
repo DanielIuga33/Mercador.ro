@@ -135,6 +135,7 @@ select{
 textarea{
     background-color: rgb(179, 179, 179);
     border-radius: 3%;
+    height: 300px;
     resize: none;
 }
 body{
