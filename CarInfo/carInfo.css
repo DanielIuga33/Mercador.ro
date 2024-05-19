@@ -24,7 +24,7 @@
     max-width: 80%;
     min-height: 85vh;
     justify-content: center; /* Aliniere pe orizontală */
-    background-color: rgb(92, 91, 91);
+    background-color: hsl(0, 0%, 30%);
 }
 .container h1{
     display:  inline-block;
@@ -76,9 +76,17 @@ body{
 }
 .box1{
     border: 2px solid rgb(65, 65, 65);
-    display: block;
-    width: 400px;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: auto;
     background-color:silver;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+.descr{
+    font-size: 16px;
 }
 .box2{
     border: 2px solid rgb(65, 65, 65);
@@ -111,7 +119,6 @@ img.enlarged {
     background: rgba(0, 0, 0, 0.8); /* culoarea fundalului transparent */
     z-index: 1000;
     border: 5px solid black;
-    cursor: pointer;
 }
 
 .close-btn {

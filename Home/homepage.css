@@ -12,9 +12,14 @@ a {
     color:black; /* Specify the desired font color */
 }
 button{
-    background-color: white;
-    border: 5px solid coral
+    background-color: hsl(0, 0%, 100%);
+    border: 5px solid hsl(16, 100%, 66%);
+    transition: 0.5s ease;
     
+}
+button:hover{
+    background-color: hsl(0, 0%, 80%);
+    border: 5px solid hsl(16, 100%, 56%);
 }
 body {
     background-image:  url('homepage.jpg');

@@ -53,7 +53,8 @@ footer{
     margin: 0 auto;
     text-align: left;
     width: 50%; /* Lățimea containerului */
-    height: 105vh; /* Înălțimea containerului */
+    min-height: 105vh; /* Înălțimea containerului */
+    height: auto;
     background: rgb(0, 0, 0); /*#adadad *//* Culoarea de fundal */
     border: 2px solid #ccc; /* Border-ul containerului */
     padding: 20px; /* Spațiul interior între conținut și marginile containerului */
@@ -155,4 +156,16 @@ body{
 }
 #myForm{
     background-image: url('../img/bccc.jpeg');
+}
+.profile p{
+    color: white;
+}
+.profile{
+    display: block;
+    border: 1px solid white;
+    width: 350px;
+    border-radius: 10px;
+}
+.inp{
+    display: none;
 }

@@ -129,7 +129,7 @@
                     <div id="city1" class="row">City/County*</div>
                     <p><input type="text" id="city" name="city"></p>
 
-                    <div id="phone1" class="row">Phone number*</div>
+                    <div id="phone1" class="row">Phone number</div>
                     <p><input type="text" id="phone" name="phone"></p>
                     
                     <div class="row">Engine capacity*</div> 
@@ -176,6 +176,13 @@
                 </div>
                 <div class="divider"></div> 
                 <div class="right-sidebar">
+                    <!-- Profile picture-->>
+                    <label class="profile" for="profilePic">
+                        <p>Insert here the profile photo</p>
+                        <input class="inp" type="file" name="profile" id="profilePic" accept=".jpg, .jpeg, .png, .webp" value="">
+                        <p id="selectedFileNameLabel"></p>
+                    </label>
+                    <br>
                     <!-- Image -->
                     <div class="image">
                         <div class="image-upload-box">
@@ -183,7 +190,7 @@
                                 <div style="color: gainsboro; text-align: center;"> Select images to upload (max. 8)</div>
                             </label>
                             <div class="image-upload-box">
-                                <input type="file" id="fileToUpload" name="image[]" accept=".jpg, .jpeg, .png" value="" multiple>
+                                <input type="file" id="fileToUpload" name="image[]" accept=".jpg, .jpeg, .png, .webp" value="" multiple>
                             </div>
                             
                         </div>

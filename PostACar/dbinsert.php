@@ -26,6 +26,9 @@
     $city = $_POST["city"];
     $doors = $_POST["doors"];
     $state = $_POST["new/used"];
+    if ($state != "New"){
+        $state = "Used";
+    }
     $gearbox = $_POST["man/aut"];
     $steeringwheel = $_POST["lf/rg"];
     $img = $_FILES["image"];
@@ -40,13 +43,13 @@
     }
     else{
         $finalImage = "";
-        print_r($_FILES);
+        print_r($_FILES["profile"]);
         for($i = 0; $i < count($_FILES["image"]["name"]); $i++){
             $fileName = $_FILES["image"]["name"][$i];
             $fileSize = $_FILES["image"]["size"][$i];
             $tmpName = $_FILES["image"]["tmp_name"][$i];
 
-            $validImageExtension = ['jpg', 'jpeg', 'png'];
+            $validImageExtension = ['jpg', 'jpeg', 'png','webp'];
             $imageExtension = explode('.', $fileName);
             $imageExtension = strtolower(end($imageExtension));
             if (!in_array($imageExtension, $validImageExtension)){
@@ -66,6 +69,24 @@
                 move_uploaded_file($tmpName, '../img/' . $newImageName);
                 $finalImage .= $newImageName . ',';
             }
+        }
+        if ($_FILES['profile'] != ""){
+            $fileName = $_FILES["profile"]["name"];
+            $fileSize = $_FILES["profile"]["size"];
+            $tmpName = $_FILES["profile"]["tmp_name"];
+            $validImageExtension = ['jpg', 'jpeg', 'png','webp'];
+            $imageExtension = explode('.', $fileName);
+            $imageExtension = strtolower(end($imageExtension));
+            if (!in_array($imageExtension, $validImageExtension)){
+                echo
+                "<script> alert('Invalid Image Extension');</script>"
+                ;
+            }
+            $newImageName = uniqid();
+            $newImageName .= '.' . $imageExtension;
+            
+            move_uploaded_file($tmpName, '../img/' . $newImageName);
+            $finalImage .= $newImageName . ',';
         }
         $finalImage = rtrim($finalImage, ',');
     }

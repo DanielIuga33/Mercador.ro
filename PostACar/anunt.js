@@ -51,12 +51,11 @@ document.getElementById('submit').addEventListener('click', function(event){
     let carbody = document.getElementById("body").value;
     let model = document.getElementById("model").value;
     let price = document.getElementById("price").value;
-    let phone = document.getElementById("phone").value;
     let fuel = document.getElementById("fuel").value;
     let year = document.getElementById("year").value;
     let city = document.getElementById("city").value;
     let description = document.getElementById("description").value;
-    if (title == "" || brand == "" || carbody == "" || model == "" || price == "" ||phone == "" || fuel == "" || year == ""){
+    if (title == "" || brand == "" || carbody == "" || model == "" || price == "" || fuel == "" || year == ""){
         event.preventDefault();
         alert('you must complete all the fields marked with * !');
         if (title == ""){
@@ -81,10 +80,6 @@ document.getElementById('submit').addEventListener('click', function(event){
         if (carbody == ""){
             document.getElementById("body1").style.color = "rgb(194, 34, 34)";
         }
-        if (phone == ""){
-            document.getElementById("phone").style.borderColor = "rgb(194, 34, 34)";
-            document.getElementById("phone1").style.color = "rgb(194, 34, 34)";
-        }
         if (fuel == ""){
             document.getElementById("fuel1").style.color = "rgb(194, 34, 34)";
         }
@@ -103,10 +98,10 @@ document.getElementById('submit').addEventListener('click', function(event){
 
 document.addEventListener("DOMContentLoaded", function() {
     // Selectăm inputul de fișier
-    var fileInput = document.getElementById('fileToUpload');
+    var fileInput1 = document.getElementById('fileToUpload');
     
     // Adăugăm un eveniment pentru a gestiona schimbările în inputul de fișier
-    fileInput.addEventListener('change', function(event) {
+    fileInput1.addEventListener('change', function(event) {
         var files = event.target.files; // Obținem lista de fișiere selectate
 
         // Verificăm dacă numărul de fișiere selectate depășește limita
@@ -114,6 +109,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("The maximum number of images you can upload is 8.");
             // Resetează inputul de fișier pentru a elimina fișierele suplimentare
             this.value = "";
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var fileInput = document.getElementById('profilePic');
+    var selectedFileNameLabel = document.getElementById('selectedFileNameLabel');
+
+
+    fileInput.addEventListener('change', function() {
+        // Verificăm dacă utilizatorul a selectat un fișier
+        if (fileInput.files.length > 0) {
+            // Afisăm numele primului fișier selectat în label
+            selectedFileNameLabel.textContent = fileInput.files[0].name;
+        } else {
+            // Dacă nu s-a selectat niciun fișier, golim conținutul label-ului
+            selectedFileNameLabel.textContent = "";
         }
     });
 });

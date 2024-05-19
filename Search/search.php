@@ -13,7 +13,8 @@
         <hr>
         <div class="bar">
             <button id="home">Home</button>
-            <h2 style="color:rgb(173, 105, 16); text-align: center"> WELCOME TO MERCADOR, WE HOPE YOU FIND THE CAR FOR YOU !</h2>
+            <h2 style="color:rgb(173, 105, 16); text-align: center"> WELCOME TO MERCADOR, WE HOPE YOU FIND THE CAR FOR
+                YOU !</h2>
         </div>
         <hr>
     </header>
@@ -223,30 +224,30 @@
                 foreach ($rows as $row) : if ($cauta != "" && strpos(strtolower($row["title"]), $cauta) === false) {
                         continue;
                     } ?>
-                    <li>
-                        <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
-                            <div class="car" onclick="this.parentNode.submit()">
-                                <img src="../img/<?php $arr = explode(',', $row['img']);
+                <li>
+                    <form action="../CarInfo/carInfo.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="arr[]" value="<?php echo $row['id']; ?>">
+                        <div class="car" onclick="this.parentNode.submit()">
+                            <img src="../img/<?php $arr = explode(',', $row['img']);
                                                     echo end($arr); ?>" alt="Imagine mașină">
-                                <div class="car-details">
-                                    <h2><?php echo $row['title'] ?></h2>
-                                    <label id="state"><?php echo $row['state']; ?></label>
-                                    <p><?php echo $row['price'] . $row['currency']; ?></p>
-                                    <p><?php echo $row['year']; ?></p>
-                                    <p><?php echo $row['km'] . " km"; ?></p><br><br>
-                                    <p id="city"><?php echo $row['city']; ?></p>
-                                    <?php $i++; ?>
-                                </div>
+                            <div class="car-details">
+                                <h2><?php echo $row['title'] ?></h2>
+                                <label id="state"><?php echo $row['state']; ?></label>
+                                <p><?php echo $row['price'] . $row['currency']; ?></p>
+                                <p><?php echo $row['year']; ?></p>
+                                <p><?php echo $row['km'] . " km"; ?></p><br><br>
+                                <p id="city"><?php echo $row['city']; ?></p>
+                                <?php $i++; ?>
                             </div>
-                        </form>
-                    </li>
-                    <br>
+                        </div>
+                    </form>
+                </li>
+                <br>
                 <?php endforeach; ?>
                 <?php if ($i === 0) { ?>
-                    <div class="grid">
-                        <h3 for="text"> Nothing to show !</h3>
-                    </div>
+                <div class="grid">
+                    <h3 for="text"> Nothing to show !</h3>
+                </div>
                 <?php } ?>
             </ul>
         </div>
